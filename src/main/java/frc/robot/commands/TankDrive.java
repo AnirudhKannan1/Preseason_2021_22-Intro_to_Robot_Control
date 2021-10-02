@@ -17,7 +17,7 @@ public class TankDrive extends CommandBase {
   
   /** Creates a new TankDrive. */
   public TankDrive(DriveTrain dt, Joystick lj, Joystick rj) {
-    // Use addRequirements() here to declare subsystem dependencies.
+    // Use uirements() here to declare subsystem dependencies.
     _driveTrain = dt;
     _leftJoystick = lj;
     _rightJoystick = rj;
@@ -31,7 +31,8 @@ public class TankDrive extends CommandBase {
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
-  public void execute() {
+  public void execute() 
+  {
     _driveTrain.tankDrive(-0.8 * _leftJoystick.getRawAxis(Constants.JoystickAxis.YAxis),
                           -0.8 * _rightJoystick.getRawAxis(Constants.JoystickAxis.YAxis));
   }

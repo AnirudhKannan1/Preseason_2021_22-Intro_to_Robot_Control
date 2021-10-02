@@ -27,7 +27,7 @@ public class DriveTrain extends SubsystemBase {
     _leftDriveTalon.setInverted(false);
     _righttDriveTalon.setInverted(false);
 
-    _diffDrive = new DifferentialDrive(_leftDriveTalon, _righttDriveTalon);
+    //_diffDrive = new DifferentialDrive(_leftDriveTalon, _righttDriveTalon);
 
 
   }
@@ -40,6 +40,11 @@ public class DriveTrain extends SubsystemBase {
   public void tankDrive(double leftSpeed, double rightSpeed) {
     _diffDrive.tankDrive(leftSpeed, rightSpeed);
 
+
+  }
+
+  public void arcadeDrive(double d, double rotation) 
+  {
 
   }
 }
